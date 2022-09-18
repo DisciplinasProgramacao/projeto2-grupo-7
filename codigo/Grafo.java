@@ -76,7 +76,7 @@ public class Grafo {
     }
     
     public int tamanho(){
-        return 0;
+        return this.vertices.size();
     }
 
     public int ordem(){

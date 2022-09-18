@@ -1,3 +1,5 @@
+package codigo;
+
 public class Vertice {
     
     private ABB<Aresta> arestas;    
