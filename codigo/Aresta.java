@@ -47,6 +47,4 @@ public public class Aresta {
 
     
 
-} {
-    
-}
+} 
