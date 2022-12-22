@@ -1,8 +1,8 @@
 public class GrafoCompleto extends Grafo {
+    private int ordem;
+    
     public GrafoCompleto(String nome) {
     }
-
-    private int ordem;
 
     public boolean completo() {
         return false;

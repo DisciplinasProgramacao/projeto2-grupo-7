@@ -1,6 +1,6 @@
 package codigo;
 
-public public class Aresta {
+public class Aresta {
 
     private int peso;
     private int destino;
