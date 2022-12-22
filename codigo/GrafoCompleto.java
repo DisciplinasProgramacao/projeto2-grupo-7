@@ -1,21 +1,15 @@
 public class GrafoCompleto extends Grafo {
     private int ordem;
+
+    static GrafoCompleto grafo = new GrafoCompleto("grafo");
     
     public GrafoCompleto(String nome) {
+        super(nome);
     }
 
     public boolean completo() {
         return false;
 
-    }
-
-    public Aresta existeAresta(int vertice, int verticeB) {
-        return null;
-
-    }
-
-    public Vertice existeVertice(int idVertice) {
-        return null;
     }
 
     public boolean euleriano() {
