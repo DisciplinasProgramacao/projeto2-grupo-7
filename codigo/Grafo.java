@@ -1,19 +1,30 @@
 package codigo;
 
+import java.util.List;
+
 /** 
  * Classe básica para um Grafo simples
  */
 public class Grafo {
     public final String nome;
-    private ABB<Vertice> vertices;
+    private List<Vertice> vertices;
 
     /**
      * Construtor. Cria um grafo vazio com capacidade para MAX_VERTICES
      */
     public Grafo(String nome){
         this.nome = nome;
-        this.vertices = new ABB<>();
+        this.vertices = new List<Vertice>();
     }
+    
+    public List<Vertice> getVertice(){
+        return this.vertices;
+    }
+    public void setVertice(List<Vertice> vertice){
+        this.vertices = vertice;
+    }
+
+
 
     public void carregar(String nomeArquivo){
 
@@ -50,12 +61,25 @@ public class Grafo {
 
     }
 
-    public Vertice existeVertice(int idVertice){
-        return this.vertices.find(idVertice);
+    public boolean existeVertice(int idVertice){
+        for(Vertice vertice : this.vertices){
+            if(vertice.getId() == idVertice)
+                return true;
+        }
+        return false;
     }
 
-    public Aresta existeAresta(int verticeA, int verticeB){
-       return null;
+    public boolean existeAresta(int verticeA, int verticeB){
+            for(int i = 0; i < this.vertices.size(); i++){
+                if(this.vertices.get(i).getId() == verticeA){
+                    if (this.vertices.get(i).existeAresta(verticeB) == null)
+                        return false;
+                    else
+                        return true;
+                    
+                }
+            }
+            return false;
     }
     
     /**
