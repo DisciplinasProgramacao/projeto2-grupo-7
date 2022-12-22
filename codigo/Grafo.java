@@ -7,7 +7,7 @@ import java.util.List;
  */
 public class Grafo {
     public final String nome;
-    private List<Vertice> vertices;
+    protected List<Vertice> vertices;
 
     /**
      * Construtor. Cria um grafo vazio com capacidade para MAX_VERTICES
