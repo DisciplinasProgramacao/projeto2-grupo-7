@@ -1,7 +1,7 @@
 public class Vertice {
     
     private ABB<Aresta> arestas;    
-    private final int  id;
+    private final int id;
     private boolean visitado;
 
 /**
@@ -14,6 +14,9 @@ public class Vertice {
         this.visitado = false;
     }
     
+    public int getId(){
+        return this.id;
+    }
   /**
      * Adiciona uma aresta neste vértice para um destino
      * @param peso Peso da aresta (1 para grafos não ponderados)
